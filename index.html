@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sagacity Software</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $('select').on('change', function() {
+                if ($(this).val()) {
+                    return $(this).css('color', 'black');
+                } else {
+                    return $(this).css('color', 'red');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+
+            jQuery(function($) {
+
+                $(".sidebar-dropdown > a").click(function() {
+                    $(".sidebar-submenu").slideUp(200);
+                    if (
+                        $(this)
+                        .parent()
+                        .hasClass("active")
+                    ) {
+                        $(".sidebar-dropdown").removeClass("active");
+                        $(this)
+                            .parent()
+                            .removeClass("active");
+                    } else {
+                        $(".sidebar-dropdown").removeClass("active");
+                        $(this)
+                            .next(".sidebar-submenu")
+                            .slideDown(200);
+                        $(this)
+                            .parent()
+                            .addClass("active");
+                    }
+                });
+
+                $("#close-sidebar").click(function() {
+                    $(".page-wrapper").removeClass("toggled");
+                });
+                $("#show-sidebar").click(function() {
+                    $(".page-wrapper").addClass("toggled");
+                });
+
+
+
+
+            });
+        })
+    </script>
+</head>
+
+<body>
+    
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">ENZEN</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <!-- <div class="invite_people">
+                    <a href="#">Invite Team <span><img src="images/circle_plus.png"/></span></a>
+                </div> -->
+
+
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="sidebar-dropdown active">
+                            <a href="#">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                <span>ENZEN</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li class="active">
+                                        <a href="QM Create Issue.html">Create Issue</a>
+                                    </li>
+                                    <li>
+                                        <a href="QM Issue Search.html">Search Issue</a>
+                                    </li>
+                                    <li>
+                                        <a href="QM Issue Resolution Enzen.html">Enzen Issue Resolution</a>
+                                    </li>
+                                    <li>
+                                        <a href="QM Issue Implement.html">Issue Resolution Implement</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                <span>UKPN</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="QM Issue Resolution UKPN.html">UKPN Issue Resolution</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                    <span>Enzen/UKPN</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="QM Issue Summary User.html">Issue Summary</a>
+                                        </li>
+                                        <li>
+                                            <a href="QM Issue Report.html">Issue Report</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        <!-- <li>
+                            <a href="#">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span>Edit Profile</span>
+
+                            </a>
+
+                        </li> -->
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+
+        </nav>
+
+        <!-- sidebar-wrapper  -->
+        
+        <main class="page-content">
+            <div class="nav_main_bar">
+                <img class="logo_top" src="images/uk_power_logo.png">
+                <h1>Enzen work management and Tracking System</h1>
+                <img class="enzen_img" src="images/enzen.png">                
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light sub_navbar">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="JM_Jobassignment.html">Job Management</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="QM Create Issue.html">Query Management<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quality Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Delivery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service level aggerment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Billing</a>
+                    </li>
+                   
+                    </ul>
+                    <span class="user"><a href="#">User</a></span>
+                    
+                </div>
+            </nav>
+            <div class="top_head">
+                <div class="top_head_lft"><span>Sampling Creation</span></div>
+            </div>
+            <!-- sidebar-header  -->
+            <div class="container-fluid c-i">
+
+                <div class="base-wrapper c-i">
+
+                    <!-- add employee -->
+                    <div class="add-employee-sec">
+                        <div class="edit-form-sec">
+                            <div class="form-inner mb-3">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 from-inner-left">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 form-label">
+                                                <h4 class="label-txt-g">Region</h4>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 form-input-side">
+                                                <input type="text" class="txt-box-g " placeholder="Enter Map Reference" value="">                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 from-inner-left button-sec-bk-days p-0">
+                                        <button class="cancel-btn" style="height:40px;">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-inner mb-3">
+                                <div class="row">
+                                                                     
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 from-inner-left">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 form-label">
+                                                <h4 class="label-txt-g">Job Type</h4>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 form-input-side">
+                                                <input type="text" class="txt-box-g " placeholder="Enter Map Reference" value="">                                                                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- form inner end -->
+                          
+                            <div class="form-inner mb-3">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 from-inner-left">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 form-label">
+                                                <h4 class="label-txt-g">Priority</h4>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 form-input-side">
+                                                <select class="select-box-g edit-select-g">
+                                                    <option></option>
+                                                    <option >Low</option>
+                                                    <option >Medium</option>
+                                                    <option>High</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 from-inner-left button-sec-bk-days p-0">
+                                        <button class="cancel-btn" style="height:40px;">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--form-inner  -->
+                        </div>
+                    </div>
+                    <!-- end add employee -->
+
+                    <div class="table-responsive emp-table">
+                        <table class="employee-table">
+                            <thead>
+                                <tr class="bg-lightgreen b-l-r">
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html0">
+                                        <label for="html0"></label>
+                                    </td>  
+                                    <td>
+                                        Lot No
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Job No
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Status
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html1" checked="">
+                                        <label for="html1"></label>
+                                    </td>  
+                                    <td>EPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html2">
+                                        <label for="html2"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html3">
+                                        <label for="html3"></label>
+                                    </td>  
+                                    <td>SPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html4" checked="">
+                                        <label for="html4"></label>
+                                    </td>  
+                                    <td>EPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html5" checked="">
+                                        <label for="html5"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html6">
+                                        <label for="html6"></label>
+                                    </td>  
+                                    <td>SPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html7">
+                                        <label for="html7"></label>
+                                    </td>  
+                                    <td>EPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html8">
+                                        <label for="html8"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html9">
+                                        <label for="html9"></label>
+                                    </td>  
+                                    <td>SPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="htm20" checked="">
+                                        <label for="htm20"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <script src="js/popper.min.js"></script>
+
+</body>

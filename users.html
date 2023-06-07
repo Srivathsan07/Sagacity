@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sagacity Software</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('select').on('change', function() {
+                if ($(this).val()) {
+                    return $(this).css('color', 'black');
+                } else {
+                    return $(this).css('color', 'red');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+
+            jQuery(function($) {
+
+                $(".sidebar-dropdown > a").click(function() {
+                    $(".sidebar-submenu").slideUp(200);
+                    if (
+                        $(this)
+                        .parent()
+                        .hasClass("active")
+                    ) {
+                        $(".sidebar-dropdown").removeClass("active");
+                        $(this)
+                            .parent()
+                            .removeClass("active");
+                    } else {
+                        $(".sidebar-dropdown").removeClass("active");
+                        $(this)
+                            .next(".sidebar-submenu")
+                            .slideDown(200);
+                        $(this)
+                            .parent()
+                            .addClass("active");
+                    }
+                });
+
+                $("#close-sidebar").click(function() {
+                    $(".page-wrapper").removeClass("toggled");
+                });
+                $("#show-sidebar").click(function() {
+                    $(".page-wrapper").addClass("toggled");
+                });
+
+
+
+
+            });
+        })
+    </script>
+</head>
+
+<body>
+    
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">ENZEN</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+
+                <div class="sidebar-menu">
+                    <ul>
+                        <!-- <li class="sidebar-dropdown active">
+                            <a href="#">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                <span>ENZEN</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li class="active">
+                                        <a class="second_a"><strong>Job Assignment / History</strong> </a>
+                                            <ul class="second_sub">
+                                                <li class="">
+                                                    <a href="JM_Jobassignment.html">Job Assignment / History</a>
+                                                </li>
+                                                <li>
+                                                    <a href="JM Production.html">Job Production</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">QC Feedback Update</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Job Search</a>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li>
+                                        <a href="JM Production.html">Job Production</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">QC Feedback Update</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Job Search</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                        <li>
+                            <a href="users.html">
+                                <i class="fas fa-list"></i>
+                                <span>User List</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+
+        </nav>
+
+        <!-- sidebar-wrapper  -->
+        
+        <main class="page-content">
+            <div class="nav_main_bar">
+                <img class="logo_top" src="images/uk_power_logo.png">
+                <h1>Enzen work management and Tracking System</h1>
+                <img class="enzen_img" src="images/enzen.png">                
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light sub_navbar">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="JM_Jobassignment.html">Job Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="QM Create Issue.html">Query Management<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quality Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service level aggerment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Billing</a>
+                        </li>
+                   
+                    </ul>
+                    <span class="user active"><a href="#">User</a></span>
+                    
+                </div>
+            </nav>
+            <!-- <div class="top_head"> -->
+                <!-- <div class="top_head_lft"><span>Summary of Issue</span></div> -->
+                <!-- <div class="top_head_rgt">
+                    <div class="sidebar-header">
+                        <div class="user-pic">
+                            <img class="img-responsive img-rounded" src="images/user_profile.png" alt="User picture">
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name"><strong>Denzel Washington</strong> 
+            
+          </span>
+                            <span class="user-name">Admin
+            
+          </span>
+
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <!-- sidebar-header  -->
+            <div class="container-fluid s-u">
+
+                <div class="base-wrapper">
+                    <div class="job_management_table_head">
+                        <div>
+                            <h1>Users List</h1>
+                        </div>
+                        <div>
+                            <!-- <select>
+                                <option>Select Employee</option>
+                                <option>Select Employee</option>
+                                <option>Select Employee</option>
+                            </select> -->
+                            <a href="add user.html"><button class="btn assign_btn">Add User</button></a>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive emp-table">
+                        <table class="employee-table">
+                            <thead>
+                                <tr class="bg-lightgreen b-l-r">
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html0">
+                                        <label for="html0"></label>
+                                    </td>  
+                                    <td>
+                                        First Name
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Last Name
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Contact Number
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Email Id
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Address
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                    <td>Actions
+                                        <img src="images/sort-arrow.png" class="sort-img"></td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html1" checked>
+                                        <label for="html1"></label>
+                                    </td>  
+                                    <td>EPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>6</td>                                    
+                                    <td>6</td>
+                                    <td>
+                                        <div>
+                                            <a href="edit_user.html"><img src="./images/pencil.png" class="mr-2"></a>
+                                            <a href="#"><img src="./images/table_delete_red.png" data-toggle="modal" data-target="#Delete-Popup"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html2">
+                                        <label for="html2"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>6</td>                                    
+                                    <td>6</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html3">
+                                        <label for="html3"></label>
+                                    </td>  
+                                    <td>SPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>5</td>                                    
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html4" checked>
+                                        <label for="html4"></label>
+                                    </td>  
+                                    <td>EPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>6</td>                                    
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html5" checked>
+                                        <label for="html5"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>5</td>                                    
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html6">
+                                        <label for="html6"></label>
+                                    </td>  
+                                    <td>SPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>5</td>                                    
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html7">
+                                        <label for="html7"></label>
+                                    </td>  
+                                    <td>EPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>6</td>                                    
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html8">
+                                        <label for="html8"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>5</td>                                    
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="html9">
+                                        <label for="html9"></label>
+                                    </td>  
+                                    <td>SPN</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>5</td>                                    
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="c_input form-group">
+                                        <input type="checkbox" id="htm20" checked>
+                                        <label for="htm20"></label>
+                                    </td>  
+                                    <td>LPN</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>6</td>                                    
+                                    <td>6</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                  
+                </div>
+                   
+
+            </div>
+
+        </main>
+        <!-- page-content" -->
+
+        <!-- update_popup -->
+        <div class="modal" id="update_popup">
+            <div class="modal-dialog modal-dialog1">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-primary">
+                        <h4 class="modal-title">Upload File</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <!-- <p class="upload">Upload file(.csv or .Xls)</p> -->
+                            <div class="custom-file mb-3">
+                                <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                            <div class="buttons-bulk1 row">
+                                <div class="col-md-6">
+                                    <a href="#" class="btn-upload-bulk1">UPLOAD NOW</a>
+                                </div>
+                                <div class="col-md-6"> 
+                                    <a href="#" class="btn-cancel-bulk1">CANCEL</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-bulk1">Dowload the sample .xml</p>
+                                    <p class="text-center">
+                                        <span class="csv">.xml file</span>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="js/popper.min.js"></script>
+<script>
+    //    side bar toggle
+
+$(document).ready(function(){
+  $(".second_a").click(function(){
+	if($(this).hasClass("act")){
+		$(this).removeClass("act");
+	}
+	else{
+		$(".second_a").removeClass("act");
+		$(this).addClass("act");
+	}
+});
+});
+</script>
+</body>

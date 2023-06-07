@@ -1,0 +1,339 @@
+    @media only screen and (min-width:320px) and (max-width:991px) {}
+    /* tracking details */
+    
+    @media only screen and (min-width:576px) and (max-width:616px) {
+        .inner-txt-btn-g {
+            max-width: 100%;
+        }
+        .custom-txt-box-g {
+            width: 67%;
+        }
+    }
+    
+    @media only screen and (min-width:320px) and (max-width:474px) {
+        .bb-btn {
+            display: none;
+        }
+        .custom-txt-box-g {
+            width: 100%;
+        }
+        .back-up-btn {
+            display: block;
+            margin-top: 15px;
+        }
+    }
+    /* end tracking */
+    /* Manage Employee */
+    
+    @media only screen and (min-width:320px) and (max-width:767px) {
+        .filter-form {
+            flex-direction: column;
+        }
+        .select-box-g {
+            width: 100%;
+            max-width: 100%;
+        }
+        #emp-name {
+            width: 100%;
+            max-width: 100%;
+        }
+        .filter-btn-sm {
+            margin-right: 0px;
+        }
+        .pagination-sec {
+            justify-content: center;
+        }
+        .from-inner-left {
+            margin-bottom: 20px;
+        }
+        .date-selection {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date-pick {
+            margin-top: 20px;
+        }
+
+        .date-piks{
+            width: 100%;
+        }
+
+        .uploaded-value {
+            width: 55%;
+        }
+        .base_height {
+            height: auto;
+        }
+    }
+    
+    @media only screen and (min-width:320px) and (max-width:570px) {
+        .table-head {
+            flex-direction: column;
+            align-items: unset;
+        }
+        .table-btn-head {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .export-btn {
+            margin-right: 10px;
+            
+        }
+
+        .add-employee-btn{
+            margin-top: 10px;
+        }
+    }
+    
+    @media only screen and (min-width:320px) and (max-width:360px) {
+        .pagination a {
+            margin: 10px;
+        }
+        .pagination a.active {
+            margin: 5px 10px;
+        }
+
+        .edit-form-sec {
+            padding: 30px 15px;
+        }
+    }
+    /* End Manage  Employee */
+    /* Manage Employee add */
+    
+    @media only screen and (min-width:1300px) {
+        .form-input-side .txt-box-g,
+        .edit-select-g {
+            max-width: 100%;
+            width: 400px;
+        }
+    }
+    
+    @media only screen and (max-width:1299px) {
+        .edit-select-g {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    
+    @media only screen and (min-width:320px) and (max-width:767px) {
+        .from-inner-left {
+            margin-bottom: 20px;
+        }
+    }
+    
+    @media only screen and (max-width:510px) {
+        .select-time-sec {
+            flex-direction: column;
+        }
+        .left-time {
+            margin: 20px auto;
+        }
+    }
+    
+    @media only screen and (max-width:443px) {
+        .cancel-btn {
+            margin-right: unset;
+            margin-bottom: 15px;
+        }
+    }
+    /* end manage employee add */
+
+    /* manage employee view */
+    @media only screen and (max-width: 991px) and (min-width: 768px){
+.from-inner-left {
+    margin-bottom: 20px;
+    }
+ .base_height {
+            height: auto;
+        }
+}
+
+@media only screen and (max-width:330px) {
+.inner-sc {
+    margin: 10px 0px;
+    margin-right: 30px;
+}}
+
+@media only screen and (max-width:570px) {
+.table-head {
+    flex-direction: column;
+}
+
+
+}
+
+    /* end manage employe view */
+
+@media only screen and (max-width:767px) {
+    img.logo_top{width: 50px;}
+    img.enzen_img{width: 50px;}
+    .nav_main_bar h1 {text-align: center;font-size: 12px;}
+    .page-wrapper .page-content>div{padding: 10px;}
+    .navbar-light .navbar-toggler {border-color: #000;}
+    .employee-table tr td.table_head_title{text-align: start;}
+    nav.navbar.navbar-expand-lg.navbar-light.sub_navbar{justify-content: flex-end;}
+    li.nav-item {padding-left: 20px;}
+    span.user{float: left; margin-left: 20px; margin-top: 10px;}
+    li.nav-item:first-child {margin-top: 10px;}
+    .edit-form-sec{padding: 0px 10px;}
+    .label-txt-g{margin-bottom: 10px;}
+    .form-inner.mb-4 {margin-bottom: 0px !important;}
+    .button-sec-bk-days button{width: 40%;}
+    .button-sec-bk-days{padding: 10px;}
+    .cancel-btn{margin-bottom: 0px;}
+    .base-wrapper{padding: 15px;}
+    .top_head_lft span{font-size: 16px;}
+    .employee-table tr td.table_head_title{font-size: 14px;}
+    .button-sec-bk-days{padding: 0px;}   
+    .button-sec-bk-days button{margin-bottom: 10px;width: 40% !important;font-size: 12px;}  
+    .button-sec-bk-days button:last-child{margin-right: 20px;} 
+    .btn.cancel-btn{margin-right: 20px;} 
+    .button-sec-bk-days button:nth-child(even){margin-right: 0px;}      
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .label-txt-g{margin-bottom: 10px;}
+    .form-inner.mb-4 {margin-bottom: 0px !important;}    
+    .nav_main_bar h1{text-align: center;}
+    nav.navbar.navbar-expand-lg.navbar-light.sub_navbar{justify-content: flex-end;}   
+    li.nav-item {padding-left: 20px;}
+    span.user{float: left; margin-left: 20px; margin-top: 10px;} 
+    .navbar-light .navbar-toggler {border-color: #000;}    
+    li.nav-item:first-child {margin-top: 10px;} 
+    .button-sec-bk-days{padding: 0px;}   
+    .button-sec-bk-days button{margin-bottom: 10px;width: 40% !important;}  
+    .button-sec-bk-days button:last-child{margin-right: 20px;}  
+     
+    
+}
+@media only screen and (min-width:1200px) and (max-width:1600px) {
+    .job_management_table_head h1{font-size: 15px;}
+    .assign_btn,.upload_btn{font-size: 13px;}
+    .job_management_table_head select{font-size: 13px;}
+}
+
+
+/* chart */
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px){
+    .chart_flex_Wrap h1.pb_20{font-size: 14px !important;}
+    .header_left h1{margin-top: 5px;font-size: 16px;}
+    .chart_flex_Wrap .width_30,.chart_flex_Wrap .width_50{margin: 10px 0px;padding: 10px 15px;}
+    .chart_legend canvas{left: -70px !important;}
+    .chart_legend ul li {font-size: 10px;margin-bottom: 15px;}
+
+}
+@media only screen and (min-width: 320px) and (max-width: 1199px){
+    .chart_flex_Wrap h1.pb_20{font-size: 14px !important;}
+    .header_left h1{margin-top: 5px;font-size: 16px;}
+    .chart_flex_Wrap .width_30,.chart_flex_Wrap .width_50{margin: 10px 0px;padding: 10px 15px;}
+    canvas#myChart {width: 100% !important;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .chart_legend ul{padding-left: 37% !important;}
+}
+
+@media screen and (min-width:992px) and (max-width:1500px) {
+    .dashboard_first .part_main h1 { 
+        font-size: 14px; 
+    }
+    .chart_legend ul li {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1280px) {
+    .chart_flex_Wrap>div {
+        width: 48% !important;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .chart_flex_Wrap>div {
+        width: 100% !important;
+    }
+    .chart_flex_Wrap { 
+        flex-direction: column;
+    }
+    .chart_legend ul li {
+        display: flex;
+        width: 100%;
+        /* justify-content: center; */
+    }
+    .chart_legend ul {
+        position: unset;
+        width: 100%;
+        transform: unset;
+        right: unset;
+        padding-left: 20%;
+    }
+}
+
+@media screen and (min-width:991px) {
+    .chart_legend canvas {
+        position: relative;
+        left: -95px;
+    }
+    
+    
+}
+
+/* LOG IN SECTION */
+
+@media only screen and (min-width:1200px) and (max-width:1600px){
+    .login-sec img{margin: 40px auto auto;}
+    .login-sec h1{font-size: 24px;margin-top: 20px;margin-bottom: 20px;}
+    .login-sec form{margin: 5px 100px 50px;}
+    .login-sec form input{font-size: 15px;padding: 10px 40px 10px 25px;margin-bottom: 20px;}
+    .login-bx svg{top:-1px;width: 20px;}
+    .login-sec h1 span{margin-left: 8px;}
+    .cus-chckbox label{font-size: 15px !important;}
+    .cus-chckbox label:before{padding: 8px;}
+    .for-btn a{font-size: 16px;}
+    .login-sec form p{margin: 30px 0px 20px 0px;}
+    .login-sec form h4 a{font-size: 16px;margin-bottom: 20px;}
+}
+@media only screen and (min-width:320px) and (max-width:1199px){
+    .login-sec>img{width: 130px;margin: 25px auto auto;}
+    .login-sec h1{font-size: 17px;margin: 10px 0px;}
+    .login-sec form label {font-size: 13px !important;margin-top: 5px;}
+    .login-sec form label a{font-size: 12px !important;margin-top: 5px;}
+    .login-sec form input{padding: 10px 15px 10px 10px; font-size: 13px;margin-bottom: 10px;line-height: 0px;}
+    .login-sec form{margin: 15px;}
+    .cus-chckbox label:before{padding: 7px;margin-right: 10px;border-radius: 3px;}
+    .cus-chckbox input:checked + label:after{top: 6px;left: 7px;width: -1px;}
+    .login-bx svg{top: -1px;width: 20px;}
+    .for-btn{height: 35px;}
+    .for-btn a{font-size: 14px;}
+    .login-sec form p{margin: 10px 0px 10px;font-size: 14px;}
+    .login-sec form h4 a{font-size: 13px;}
+    form.form-group.mar-btm.min-hei{margin: 10px;}
+    select.sel-txt{padding: 5px 12px 5px 10px;font-size: 13px;margin-bottom: 13px;}
+    .sing-sec-txt p{font-size: 15px;margin: 10px 0px 10px 0px;}
+    .sing-sec-txt h4 a{font-size: 15px;margin-bottom: 20px;}
+    .page-inner, .page-inner-fg {padding: 70px 10px 40px 10px;}
+    .login-sec{width: 100%;}
+}
+@media only screen  and (max-width:768px) {
+
+    .page-inner,.page-inner-fg{padding: 80px 40px 40px 40px; }
+
+    .backgrd-sec {width: 90%;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;position: unset;height: 10px;}   
+}
+
+@media only screen  and (max-width:600px) { 
+
+    .page-inner,.page-inner-fg{padding: 80px 20px 40px 20px; }
+
+    .login-sec form {margin: 30px 20px;}
+
+    form.form-group.mar-btm.min-hei {margin: 30px 20px 30px 20px;padding: 0px 5px}
+ 
+    .login-sec form p {font-size: 16px;}
+
+    .fg-txt { margin-top: 50px !important; }
+}
+
+
+/* LOG IN SECTION */
